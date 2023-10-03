@@ -1,0 +1,161 @@
+/* Heading And Paragraph Styling */
+h1,
+h2,
+#mission-paragraph {
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+    margin: 0.3em;
+    font-size: 3em;
+    text-align: center;
+}
+
+.timeline #mission-heading-h2 {
+    margin-bottom: 0.5em;
+}
+
+#mission-paragraph {
+    font-size: 1.3em;
+    letter-spacing: 2px;
+}
+
+/* Timeline Styling */
+.timeline {
+    margin: 5em auto;
+    max-width: 34.15em;
+}
+
+.checkpoint {
+    max-width: 34em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+}
+
+.checkpoint #box {
+    border: 2px solid #888;
+    border-radius: 1em;
+    padding: 1.5em;
+}
+
+.checkpoint #mission-paragraph {
+    line-height: 27px;
+    color: #ccc;
+}
+
+.checkpoint:nth-child(odd) {
+    border-left: 3px solid #888;
+    padding-left: 3em;
+    transform: translateX(17em);
+}
+
+.checkpoint:nth-child(even) {
+    border-right: 3px solid #888;
+    padding-right: 3em;
+    transform: translateX(-16.8em);
+}
+
+.checkpoint:nth-child(odd)::before,
+.checkpoint:nth-child(even)::before {
+    content: '';
+    background: #888;
+    width: 3em;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.checkpoint:nth-child(odd)::before {
+    left: 0;
+}
+
+.checkpoint:nth-child(even)::before {
+    right: 0;
+}
+
+.checkpoint:nth-child(odd) div::before,
+.checkpoint:nth-child(even) div::before {
+    content: '';
+    background: #fff;
+    box-shadow: 0 0 0.5em #0d71fc;
+    width: 0.8em;
+    height: 0.8em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.checkpoint:nth-child(odd) div::before {
+    left: -0.5em;
+}
+
+.checkpoint:nth-child(even) div::before {
+    right: -0.5em;
+}
+
+.checkpoint #heading-goals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkpoint img {
+    width: 40px;
+    border-radius: 50%;
+    padding-left: 5px;
+}
+
+#slide {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s, transform 0.5s;
+    color: white;
+}
+
+/* Media Quries For Small Screen's */
+@media screen and (max-width: 1150px) {
+    p {
+        margin-bottom: 30px;
+    }
+
+    .timeline {
+        width: 80vw;
+    }
+
+    .timeline .checkpoint {
+        width: 100%;
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+    }
+
+    .timeline .checkpoint::before {
+        width: 3px;
+        height: 4em;
+        top: -2em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline .checkpoint div::before {
+        top: -0.5em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #mission-paragraph {
+        font-size: 1em;
+    }
+}
+
+/* Media Quries For Small Screen's */
+@media (max-width: 750px) {
+    p {
+        font-size: 1em;
+    }
+}

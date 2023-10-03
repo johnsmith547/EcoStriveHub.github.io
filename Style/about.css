@@ -1,0 +1,17 @@
+/* Icon Styling */
+#social-icons {
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+#social-icons i {
+    color: #fff;
+    padding: 5px;
+}
+
+#social-icons h6 {
+    color: #fff;
+    padding: 5px;
+}
